@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield Portal — Cyber Security Awareness &amp; Crime Reporting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+
+    <!-- Educational Disclaimer + Emergency Notice Top Strip -->
+    <div class="top-notice" role="region" aria-label="Emergency and portal notice">
+        <div class="container top-notice-inner">
+            <span class="edu-pill">Educational Project Portal (Not an Official Government Site)</span>
+            <p class="emergency-strip">
+                <strong>Emergency Notice:</strong> In India, if you are a victim of cyber financial fraud, call <strong>1930</strong> immediately and report the incident at
+                <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">https://cybercrime.gov.in</a>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="top">
+        <div class="container nav-inner">
+            <a href="#home" class="brand" aria-label="CyberShield Portal Home">
+                <svg class="brand-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                    <path d="M18 3L5 8.5V17.5C5 25.5 10.6 31.7 18 33.5C25.4 31.7 31 25.5 31 17.5V8.5L18 3Z" stroke="currentColor" stroke-width="2.2" fill="rgba(34,211,238,0.14)"/>
+                    <path d="M13 18.2L16.5 21.7L23.5 14.5" stroke="#22d3ee" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>
+                    <strong>CyberShield</strong>
+                    <small>Awareness &amp; Reporting Portal</small>
+                </span>
+            </a>
+
+            <button type="button" id="mobileMenuBtn" class="mobile-menu-btn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="navLinks" class="nav-links" aria-label="Primary navigation">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#awareness" class="nav-link">Cyber Awareness</a>
+                <a href="#safety-tips" class="nav-link">Safety Tips</a>
+                <a href="#report-portal" class="nav-link">Report Crime</a>
+                <a href="#track-report" class="nav-link">Track Report</a>
+                <a href="#citizen-portal" class="nav-link">Citizen Login</a>
+                <a href="#admin-portal" class="nav-link">Admin/Officer</a>
+                <div id="headerAdminBadge" class="header-admin-badge hidden">
+                    <span id="headerAdminName"></span>
+                    <button type="button" id="headerLogoutBtn" class="btn btn-outline-cyan btn-xs">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="mainContent">
+        <!-- 1. Hero / Landing Section -->
+        <section id="home" class="hero">
+            <div class="hero-grid-bg" aria-hidden="true"></div>
+            <div class="container hero-inner">
+                <div class="hero-copy">
+                    <span class="hero-eyebrow">Cyber Crime Reporting &amp; Digital Safety</span>
+                    <h1>Your Digital Safety Starts Here</h1>
+                    <p class="hero-subtitle">Stay Aware. Stay Secure. Report Cyber Crime.</p>
+                    <p class="hero-description">
+                        Learn how modern cyber scams work in plain language, practice everyday digital hygiene,
+                        submit cyber incident reports, and track report status securely.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#report-portal" class="btn btn-cyan btn-lg">Report Cyber Crime</a>
+                        <a href="#citizen-portal" class="btn btn-white btn-lg">Citizen Login</a>
+                        <a href="#admin-portal" class="btn btn-outline-light btn-lg">Admin/Officer Login</a>
+                    </div>
+
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <strong>18+</strong>
+                            <span>Cyber Crime Guides</span>
+                        </div>
+                        <div class="highlight-item">
+                            <strong>8</strong>
+                            <span>Practical Safety Pillars</span>
+                        </div>
+                        <div class="highlight-item">
+                            <strong>1930</strong>
+                            <span>India Financial Fraud Helpline</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Cybersecurity Illustration -->
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="shield-orbit">
+                        <svg class="hero-svg" viewBox="0 0 420 380" fill="none">
+                            <defs>
+                                <linearGradient id="shieldGrad" x1="90" y1="40" x2="330" y2="330" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.32"/>
+                                    <stop offset="100%" stop-color="#0f294d" stop-opacity="0.92"/>
+                                </linearGradient>
+                                <linearGradient id="strokeGrad" x1="90" y1="40" x2="330" y2="330" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#67e8f9"/>
+                                    <stop offset="100%" stop-color="#0284c7"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Outer radar rings -->
+                            <circle cx="210" cy="190" r="165" stroke="rgba(34,211,238,0.16)" stroke-dasharray="6 8" stroke-width="1.5"/>
+                            <circle cx="210" cy="190" r="130" stroke="rgba(34,211,238,0.24)" stroke-width="1.5"/>
+                            <!-- Connection nodes -->
+                            <line x1="65" y1="100" x2="135" y2="145" stroke="rgba(103,232,249,0.45)" stroke-width="1.5"/>
+                            <line x1="355" y1="105" x2="285" y2="145" stroke="rgba(103,232,249,0.45)" stroke-width="1.5"/>
+                            <line x1="75" y1="280" x2="145" y2="240" stroke="rgba(103,232,249,0.45)" stroke-width="1.5"/>
+                            <line x1="345" y1="280" x2="275" y2="240" stroke="rgba(103,232,249,0.45)" stroke-width="1.5"/>
+                            <circle cx="65" cy="100" r="8" fill="#0b1b3a" stroke="#22d3ee" stroke-width="2"/>
+                            <circle cx="355" cy="105" r="8" fill="#0b1b3a" stroke="#22d3ee" stroke-width="2"/>
+                            <circle cx="75" cy="280" r="8" fill="#0b1b3a" stroke="#22d3ee" stroke-width="2"/>
+                            <circle cx="345" cy="280" r="8" fill="#0b1b3a" stroke="#22d3ee" stroke-width="2"/>
+                            <!-- Main shield -->
+                            <path d="M210 48L108 92V182C108 256 152 313 210 334C268 313 312 256 312 182V92L210 48Z" fill="url(#shieldGrad)" stroke="url(#strokeGrad)" stroke-width="3"/>
+                            <!-- Padlock inside shield -->
+                            <rect x="174" y="176" width="72" height="58" rx="10" fill="#071329" stroke="#67e8f9" stroke-width="2.5"/>
+                            <path d="M188 176V156C188 143.8 197.8 134 210 134C222.2 134 232 143.8 232 156V176" stroke="#22d3ee" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="210" cy="202" r="6" fill="#22d3ee"/>
+                            <path d="M210 208V219" stroke="#22d3ee" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <div class="floating-chip chip-1">OTP &amp; UPI Protection</div>
+                        <div class="floating-chip chip-2">Verified Reporting</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Rotating Awareness Quotes -->
+        <section class="quotes-section" aria-label="Cyber awareness quotes">
+            <div class="container quotes-box">
+                <button type="button" id="prevQuoteBtn" class="quote-nav-btn" aria-label="Previous quote">&lsaquo;</button>
+                <div class="quote-content" aria-live="polite">
+                    <span class="quote-tag">Cyber Safety Mindset</span>
+                    <blockquote id="quoteText" class="quote-text">"Think Before You Click."</blockquote>
+                    <div id="quoteDots" class="quote-dots" role="tablist" aria-label="Select awareness quote"></div>
+                </div>
+                <button type="button" id="nextQuoteBtn" class="quote-nav-btn" aria-label="Next quote">&rsaquo;</button>
+            </div>
+        </section>
+
+        <!-- 8. Important Safety Information Callout -->
+        <section class="container safety-alert-wrap" aria-label="Emergency cyber crime reporting notice">
+            <div class="safety-alert">
+                <div class="safety-alert-icon" aria-hidden="true">!</div>
+                <div>
+                    <h2>Immediate Financial Fraud Help</h2>
+                    <p>
+                        In India, if you are a victim of cyber financial fraud, call <strong>1930</strong> immediately and report the incident at
+                        <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">https://cybercrime.gov.in</a>.
+                        <em>This website is an educational/college project portal and is not an official government portal.</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Cyber Awareness Section (18 Categories + Search + Modal) -->
+        <section id="awareness" class="section section-light">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-kicker">Knowledge Center</span>
+                        <h2>Cyber Crime Awareness Guide</h2>
+                        <p class="section-lead">
+                            Explore 18 common cyber crimes explained clearly with real examples, warning signs, prevention steps, and how to respond.
+                        </p>
+                    </div>
+                    <div class="search-box-wrap">
+                        <label for="categorySearchInput" class="sr-only">Search cyber crime categories</label>
+                        <input type="search" id="categorySearchInput" class="category-search" placeholder="Search crimes (e.g., UPI, OTP, SIM, job, phishing)...">
+                        <span id="categoryCountLabel" class="category-count">Showing 18 of 18 categories</span>
+                    </div>
+                </div>
+
+                <div id="categoriesGrid" class="categories-grid"></div>
+                <div id="noCategoriesMsg" class="empty-box hidden">
+                    No matching cyber crime categories found. Try searching another keyword such as <strong>UPI</strong>, <strong>OTP</strong>, or <strong>Phishing</strong>.
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Practical Safety Tips Section -->
+        <section id="safety-tips" class="section section-navy">
+            <div class="container">
+                <div class="section-header section-header-center">
+                    <span class="section-kicker kicker-cyan">Everyday Digital Hygiene</span>
+                    <h2>8 Essential Cyber Safety Tips</h2>
+                    <p class="section-lead lead-light">
+                        Simple daily habits that protect your bank accounts, personal photos, and online identity.
+                    </p>
+                </div>
+                <div id="safetyTipsGrid" class="tips-grid"></div>
+            </div>
+        </section>
+
+        <!-- Report Cyber Crime & Track Report Section -->
+        <section id="report-portal" class="section section-light">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-kicker">Incident Reporting</span>
+                        <h2>Report Cyber Crime &amp; Track Status</h2>
+                        <p class="section-lead">
+                            Submit a cyber incident directly to the portal database or check the progress of an existing report using its Reference ID.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="portal-grid">
+                    <!-- Submit Report Form (Connected to POST /api/reports) -->
+                    <div class="panel">
+                        <h3>Submit a Cyber Crime Report</h3>
+                        <p class="panel-sub">All fields are validated before saving to MongoDB.</p>
+                        <form id="reportForm" novalidate>
+                            <div class="form-group">
+                                <label for="reporterName">Full Name <span class="req">*</span></label>
+                                <input type="text" id="reporterName" name="reporterName" placeholder="e.g., Aarav Sharma" required>
+                                <small class="field-error" data-error-for="reporterName"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reporterEmail">Email Address <span class="req">*</span></label>
+                                <input type="email" id="reporterEmail" name="reporterEmail" placeholder="e.g., aarav@example.com" required>
+                                <small class="field-error" data-error-for="reporterEmail"></small>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="crimeType">Crime Category <span class="req">*</span></label>
+                                    <select id="crimeType" name="crimeType" required>
+                                        <option value="">Select category...</option>
+                                        <option value="Phishing">Phishing</option>
+                                        <option value="UPI and Online Payment Fraud">UPI and Online Payment Fraud</option>
+                                        <option value="Identity Theft">Identity Theft</option>
+                                        <option value="Malware and Ransomware">Malware and Ransomware</option>
+                                        <option value="Cyberbullying">Cyberbullying</option>
+                                        <option value="Fake Profiles and Impersonation">Fake Profiles and Impersonation</option>
+                                        <option value="Online Shopping Fraud">Online Shopping Fraud</option>
+                                        <option value="Social Engineering and OTP Fraud">Social Engineering and OTP Fraud</option>
+                                        <option value="Data Theft and Data Breaches">Data Theft and Data Breaches</option>
+                                        <option value="Job and Employment Scams">Job and Employment Scams</option>
+                                        <option value="Online Investment Scams">Online Investment Scams</option>
+                                        <option value="Loan App Fraud">Loan App Fraud</option>
+                                        <option value="Sextortion">Sextortion</option>
+                                        <option value="SIM Swapping">SIM Swapping</option>
+                                        <option value="Cyberstalking">Cyberstalking</option>
+                                        <option value="Email Spoofing">Email Spoofing</option>
+                                        <option value="Website Hacking and Defacement">Website Hacking and Defacement</option>
+                                        <option value="Online Gaming Scams">Online Gaming Scams</option>
+                                    </select>
+                                    <small class="field-error" data-error-for="crimeType"></small>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="incidentDate">Incident Date <span class="req">*</span></label>
+                                    <input type="date" id="incidentDate" name="incidentDate" required>
+                                    <small class="field-error" data-error-for="incidentDate"></small>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Incident Details <span class="req">*</span></label>
+                                <textarea id="description" name="description" rows="4" placeholder="Describe what happened, suspicious links/numbers, and date/time (10 to 2000 characters)..." required></textarea>
+                                <small class="field-error" data-error-for="description"></small>
+                            </div>
+
+                            <div id="formBanner" class="status-banner hidden" role="status" aria-live="polite"></div>
+                            <button type="submit" id="submitReportBtn" class="btn btn-cyan btn-full">Submit Report</button>
+                        </form>
+                    </div>
+
+                    <!-- Track Report Box (Connected to GET /api/reports/track/{id}) -->
+                    <div id="track-report" class="panel panel-track">
+                        <h3>Track Report Status</h3>
+                        <p class="panel-sub">
+                            Enter the Reference ID you received after submitting a report. Only non-personal status details are displayed publicly.
+                        </p>
+                        <form id="trackForm" class="track-form" novalidate>
+                            <div class="form-group">
+                                <label for="trackIdInput">Report Reference ID</label>
+                                <div class="track-input-row">
+                                    <input type="text" id="trackIdInput" placeholder="Paste your Reference ID..." required>
+                                    <button type="submit" id="trackBtn" class="btn btn-navy">Check Status</button>
+                                </div>
+                                <small class="field-error" id="trackError"></small>
+                            </div>
+                        </form>
+
+                        <div id="trackResult" class="track-result hidden" aria-live="polite"></div>
+
+                        <div class="evidence-checklist">
+                            <h4>Checklist Before Reporting</h4>
+                            <ul>
+                                <li>Save screenshots of chats, SMS, emails, and fake websites.</li>
+                                <li>Note UPI transaction IDs, bank reference numbers, and timestamps.</li>
+                                <li>Record caller phone numbers, social media profile URLs, or handles.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Separate Login Interfaces: Citizen Login & Admin/Officer Login -->
+        <section id="login-portals" class="section section-tinted">
+            <div class="container">
+                <div class="section-header section-header-center">
+                    <span class="section-kicker">Portal Access</span>
+                    <h2>Citizen &amp; Admin/Officer Portals</h2>
+                    <p class="section-lead">
+                        Separate authentication interfaces. Public admin registration is disabled for security.
+                    </p>
+                </div>
+
+                <div class="auth-grid">
+                    <!-- Citizen Login Interface (Pending Backend Integration) -->
+                    <div id="citizen-portal" class="panel auth-panel">
+                        <div class="auth-badge-row">
+                            <span class="role-badge role-citizen">Citizen Portal</span>
+                            <span class="integration-pill">API Integration Pending</span>
+                        </div>
+                        <h3>Citizen Login</h3>
+                        <p class="panel-sub">
+                            Sign in to manage personal reports. <em>Note: Citizen login and registration endpoints are not yet implemented in the Spring Boot backend, so login is not simulated here.</em>
+                        </p>
+
+                        <form id="citizenLoginForm" novalidate>
+                            <div class="form-group">
+                                <label for="citizenEmail">Citizen Email <span class="req">*</span></label>
+                                <input type="email" id="citizenEmail" placeholder="citizen@example.com" required>
+                                <small class="field-error" id="citizenEmailErr"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="citizenPassword">Password <span class="req">*</span></label>
+                                <input type="password" id="citizenPassword" placeholder="Enter your password" required>
+                                <small class="field-error" id="citizenPasswordErr"></small>
+                            </div>
+                            <div id="citizenBanner" class="status-banner hidden" role="status" aria-live="polite"></div>
+                            <button type="submit" id="citizenLoginBtn" class="btn btn-navy btn-full">Citizen Login</button>
+                        </form>
+
+                        <div class="pending-note">
+                            <strong>No account needed right now:</strong> You can already <a href="#report-portal">submit a report</a> and <a href="#track-report">track it by Reference ID</a> without registering. Citizen registration UI will connect once <code>/api/auth/citizen/register</code> is added to the backend.
+                        </div>
+                    </div>
+
+                    <!-- Admin / Officer Login & Live Dashboard (Connected to Spring Security & MongoDB APIs) -->
+                    <div id="admin-portal" class="panel auth-panel">
+                        <div class="auth-badge-row">
+                            <span class="role-badge role-admin">Admin / Officer Portal</span>
+                            <span class="integration-pill pill-live">Connected to Backend</span>
+                        </div>
+
+                        <div id="adminLoginView">
+                            <h3>Admin / Officer Login</h3>
+                            <p class="panel-sub">
+                                Authorized officers only. Uses Spring Security session authentication (<code>POST /api/auth/login</code>). Public admin registration is not permitted.
+                            </p>
+
+                            <form id="adminLoginForm" novalidate>
+                                <div class="form-group">
+                                    <label for="adminUsername">Officer Username <span class="req">*</span></label>
+                                    <input type="text" id="adminUsername" name="username" placeholder="Enter admin username" required>
+                                    <small class="field-error" id="adminUserErr"></small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="adminPassword">Password <span class="req">*</span></label>
+                                    <input type="password" id="adminPassword" name="password" placeholder="Enter admin password" required>
+                                    <small class="field-error" id="adminPassErr"></small>
+                                </div>
+                                <div id="adminLoginBanner" class="status-banner hidden" role="status" aria-live="polite"></div>
+                                <button type="submit" id="adminLoginBtn" class="btn btn-cyan btn-full">Login as Admin/Officer</button>
+                            </form>
+                        </div>
+
+                        <div id="adminDashboardView" class="hidden">
+                            <div class="admin-dash-top">
+                                <div>
+                                    <h3>Officer Report Dashboard</h3>
+                                    <p class="panel-sub">Signed in as <strong id="dashUsername"></strong></p>
+                                </div>
+                                <button type="button" id="dashLogoutBtn" class="btn btn-secondary btn-sm">Logout</button>
+                            </div>
+
+                            <div class="stats-row" aria-label="Report status counts">
+                                <div class="stat-card">
+                                    <span>Total</span>
+                                    <strong id="statTotal">0</strong>
+                                </div>
+                                <div class="stat-card stat-pending">
+                                    <span>Pending</span>
+                                    <strong id="statPending">0</strong>
+                                </div>
+                                <div class="stat-card stat-review">
+                                    <span>Under Review</span>
+                                    <strong id="statUnderReview">0</strong>
+                                </div>
+                                <div class="stat-card stat-resolved">
+                                    <span>Resolved</span>
+                                    <strong id="statResolved">0</strong>
+                                </div>
+                            </div>
+
+                            <div class="admin-filters">
+                                <input type="search" id="adminSearchInput" placeholder="Search name, email, ID, or details..." aria-label="Search submitted reports">
+                                <select id="filterStatus" aria-label="Filter by status">
+                                    <option value="">All Statuses</option>
+                                    <option value="PENDING">Pending</option>
+                                    <option value="UNDER_REVIEW">Under Review</option>
+                                    <option value="RESOLVED">Resolved</option>
+                                </select>
+                                <select id="filterCrimeType" aria-label="Filter by crime type">
+                                    <option value="">All Categories</option>
+                                    <option value="Phishing">Phishing</option>
+                                    <option value="UPI and Online Payment Fraud">UPI and Online Payment Fraud</option>
+                                    <option value="Identity Theft">Identity Theft</option>
+                                    <option value="Malware and Ransomware">Malware and Ransomware</option>
+                                    <option value="Cyberbullying">Cyberbullying</option>
+                                    <option value="Fake Profiles and Impersonation">Fake Profiles and Impersonation</option>
+                                    <option value="Online Shopping Fraud">Online Shopping Fraud</option>
+                                    <option value="Social Engineering and OTP Fraud">Social Engineering and OTP Fraud</option>
+                                    <option value="Data Theft and Data Breaches">Data Theft and Data Breaches</option>
+                                    <option value="Job and Employment Scams">Job and Employment Scams</option>
+                                    <option value="Online Investment Scams">Online Investment Scams</option>
+                                    <option value="Loan App Fraud">Loan App Fraud</option>
+                                    <option value="Sextortion">Sextortion</option>
+                                    <option value="SIM Swapping">SIM Swapping</option>
+                                    <option value="Cyberstalking">Cyberstalking</option>
+                                    <option value="Email Spoofing">Email Spoofing</option>
+                                    <option value="Website Hacking and Defacement">Website Hacking and Defacement</option>
+                                    <option value="Online Gaming Scams">Online Gaming Scams</option>
+                                </select>
+                                <button type="button" id="resetFiltersBtn" class="btn btn-secondary btn-sm">Reset</button>
+                            </div>
+
+                            <div id="reportsList" class="reports-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-brand">CyberShield Portal</div>
+                <p>
+                    An educational college project built with Java, Spring Boot, MongoDB, and responsive HTML/CSS/JavaScript
+                    to spread cyber security awareness and demonstrate cyber incident reporting.
+                </p>
+                <p class="footer-disclaimer">
+                    <strong>Disclaimer:</strong> This website is an educational project portal and is not an official government portal.
+                </p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#awareness">Cyber Awareness (18 Crimes)</a></li>
+                    <li><a href="#safety-tips">Safety Tips</a></li>
+                    <li><a href="#report-portal">Report Cyber Crime</a></li>
+                    <li><a href="#track-report">Track Report</a></li>
+                    <li><a href="#citizen-portal">Citizen Login</a></li>
+                    <li><a href="#admin-portal">Admin/Officer Login</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Cyber Safety Resources</h4>
+                <ul class="footer-links">
+                    <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">National Cyber Crime Reporting Portal (India)</a></li>
+                    <li><a href="https://www.cert-in.org.in" target="_blank" rel="noopener noreferrer">CERT-In (Indian Computer Emergency Response Team)</a></li>
+                    <li><a href="https://www.rbi.org.in" target="_blank" rel="noopener noreferrer">Reserve Bank of India (Digital Banking Safety)</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Emergency Reporting</h4>
+                <div class="footer-emergency-box">
+                    <p>
+                        In India, if you are a victim of cyber financial fraud, call <strong>1930</strong> immediately and report the incident at
+                        <a href="https://cybercrime.gov.in" target="_blank" rel="noopener noreferrer">https://cybercrime.gov.in</a>.
+                    </p>
+                </div>
+                <p class="footer-meta">Project Repository Portal — No official contact phone or support email is configured.</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>CyberShield — Educational Cyber Crime Reporting &amp; Awareness Project</span>
+            <span>Java 21 &bull; Spring Boot &bull; MongoDB</span>
+        </div>
+    </footer>
+
+    <!-- Category Detail Modal (Read More) -->
+    <div id="categoryModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <span id="modalCategoryTag" class="modal-tag"></span>
+                    <h3 id="modalTitle"></h3>
+                </div>
+                <button type="button" id="closeModalBtn" class="modal-close" aria-label="Close details">&times;</button>
+            </div>
+            <div id="modalBody" class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" id="modalCloseFooterBtn" class="btn btn-secondary">Close</button>
+                <button type="button" id="modalReportBtn" class="btn btn-cyan">Report This Cyber Crime</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
